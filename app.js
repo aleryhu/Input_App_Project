@@ -7,9 +7,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.post('/data', (req, res) => {
-  const { payload } = req.body;
-  console.log(payload);
-  res.status(201).json({ sucess: true });
+  const { data } = req.body;
+  console.log(data);
+  res.status(201).json({ sucess: true, value: data });
 });
 
 const port = 5000;
